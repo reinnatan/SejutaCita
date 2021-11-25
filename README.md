@@ -4,7 +4,7 @@ untuk dokumentasi api postman bisa didaptkan di folder collections
 # Menjalankan server
 untuk menjalankan bisa dilakukan dengan 3 cara:
 1. dengan server lokal bisa dilakukan dengan mejalankan applikasi secara langsung dengan menggunakan perintah ```node index.js```
-2. dengan menggunakan ```docker-compose up -d```, sebelum menjalankan perintah tadi terlebih dahulu perintah bisa mengeksusi ```./build-image.sh```
+2. dengan menggunakan ```docker-compose up -d```, sebelum menjalankan perintah tadi terlebih dahulu perintah bisa mengeksusi ```./build-image.sh``` agar image terbuild terlebih dahulu
 2. dengan menggunakan kubernetes dengan cara mejalankan perintah:
     - ```kubectl apply -f mongodb-deployment.yaml```
     - ```kubectl apply -f nodejs-deployment.yaml```

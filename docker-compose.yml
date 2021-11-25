@@ -1,0 +1,17 @@
+version: "3"
+services:
+       rest-app:
+           container_name: rest-app
+           image: rest-app
+           #build: .
+           ports:
+             - "3030:3030"
+           links:
+             - mongo
+       mongo:
+             container_name: mongo
+             image: mongo
+             volumes:
+               - ./data:/data/db
+             ports:
+               - '27017:27017'

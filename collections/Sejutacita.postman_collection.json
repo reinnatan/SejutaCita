@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "1bf6d4b8-b53e-4523-9697-a8d561f28b07",
+		"name": "Sejutacita",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\":\"Reinhart\",\n    \"last_name\":\"Natanael\",\n    \"email\":\"reinnatan@gmail.com\",\n    \"password\":\"coba123\",\n    \"user_type\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"budisunarto@gmail.com\",\n    \"password\":\"coba123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE5ZjA2NzZjMTg5ZTAwNzIzYTZjODFjIiwiZW1haWwiOiJidWRpc3VuYXJ0b0BnbWFpbC5jb20iLCJpYXQiOjE2Mzc4MTE4NjcsImV4cCI6MTYzNzgxOTA2N30.Y5H2vR1KQa-tCn2bM1u2ieo3K8-PIychaQuvnV1CcDI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\":\"Reinhart Baru\",\n    \"last_name\":\"Natanael Baru\",\n    \"email\":\"reinnatan@gmail.com\",\n    \"password\":\"coba1234\",\n    \"user_type\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/update/619e3ea26bf77a97ea10cb86?",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"update",
+						"619e3ea26bf77a97ea10cb86"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE5ZjA1NDlkMWYxNjBiOGU2MDM3YTVjIiwiZW1haWwiOiJyZWlubmF0YW5AZ21haWwuY29tIiwiaWF0IjoxNjM3ODExNjI3LCJleHAiOjE2Mzc4MTg4Mjd9.eFAaH9aY-C31hJHz8QDOKDLZQWVwXCuKLHU-3T0FUjM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3030/delete/619f0676c189e00723a6c81c",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"delete",
+						"619f0676c189e00723a6c81c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjE5ZjA2NzZjMTg5ZTAwNzIzYTZjODFjIiwiZW1haWwiOiJidWRpc3VuYXJ0b0BnbWFpbC5jb20iLCJpYXQiOjE2Mzc4MTE4NjcsImV4cCI6MTYzNzgxOTA2N30.Y5H2vR1KQa-tCn2bM1u2ieo3K8-PIychaQuvnV1CcDI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "192.168.100.89:3030/users",
+					"host": [
+						"192",
+						"168",
+						"100",
+						"89"
+					],
+					"port": "3030",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/user/619efeb14c27dbd001ba4fa2",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"user",
+						"619efeb14c27dbd001ba4fa2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/refresh/619f22c9f640dd8e2ec7f9d8",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"refresh",
+						"619f22c9f640dd8e2ec7f9d8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

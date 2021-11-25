@@ -1,5 +1,6 @@
-FROM alpine:latest
-RUN apk add --update nodejs npm
+#FROM alpine:latest
+#RUN apk add --update nodejs npm
+FROM node:latest
 WORKDIR /app
 COPY . /app
 COPY package.json /app

@@ -33,4 +33,3 @@ spec:
   - protocol: TCP
     port: 5000
     targetPort: 3030
-    nodePort: 3030
